@@ -1,0 +1,85 @@
+while True:
+   f = open("file.txt", 'r')
+   line = f.readline()
+   print("비밀번호를 입력해주세요")
+   f.close()
+   c = input()
+   if c == line:
+      print("시작")
+      break
+   if c != line:
+      print("비밀번호가 틀렸습니다.")
+
+import random
+a = [".",".",".",".",".",".",".",".","."]
+def ttt():
+   print(a[0] + "   ㅣ   " + a[1] + " ㅣ  " + a[2])
+   print("---------------")
+   print(a[3] + "   ㅣ   " + a[4] + " ㅣ  " + a[5])
+   print("---------------")
+   print(a[6] + "   ㅣ   " + a[7] + " ㅣ  " + a[8])
+ttt()
+while True:
+   b = int(input("원하는 칸 숫자를 입력해주세요:"))
+   a[b] = "O"
+   ttt()
+   if a[0]=="O" and a[1]=="O" and a[2]=="O":
+      print("이겼드아")
+      break
+   elif a[3]=="O" and a[4]=="O" and a[5]=="O":
+      print("이겼드아")
+      break
+   elif a[6]=="O" and a[7]=="O" and a[8]=="O":
+      print("이겼드아")
+      break
+   elif a[0]=="O" and a[4]=="O" and a[8]=="O":
+      print("이겼드아")
+      break
+   elif a[2]=="O" and a[4]=="O" and a[6]=="O":
+      print("이겼드아")
+      break
+   elif a[0]=="O" and a[3]=="O" and a[6]=="O":
+      print("이겼드아")
+      break
+   elif a[1]=="O" and a[4]=="O" and a[7]=="O":
+      print("이겼드아!")
+      break
+   elif a[2]=="O" and a[5]=="O" and a[8]=="O":
+      print("이겼드아")
+      break
+
+   computer = random.randrange(0,9)
+   a[computer] = "X"
+   if a=="." :
+      print("컴퓨터")
+      ttt()
+   elif a != ".":
+      print("컴퓨터")
+      ttt()
+       
+
+
+   if a[0]=="X" and a[1]=="X" and a[2]=="X":
+      print("졌드아")
+      break
+   elif a[3]=="X" and a[4]=="X" and a[5]=="X":
+      print("졌드아")
+      break
+   elif a[6]=="X" and a[7]=="X" and a[8]=="X":
+      print("졌드아")
+      break
+   elif a[0]=="X" and a[4]=="X" and a[8]=="X":
+      print("졌드아")
+      break
+   elif a[2]=="X" and a[4]=="X" and a[6]=="X":
+      print("졌드아")
+   elif a[0]=="X" and a[3]=="X" and a[6]=="X":
+      print("졌드아")
+      break
+   elif a[1]=="X" and a[4]=="X" and a[7]=="X":
+      print("졌드아!")
+      break
+   elif a[2]=="X" and a[5]=="X" and a[8]=="X":
+      print("졌드아")
+   break
+
